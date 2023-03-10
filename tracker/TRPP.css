@@ -1,0 +1,159 @@
+:root{
+    /*Установление цвета*/
+    --orange:#E47502;
+    --light-orange:#FFA801;
+    --blue:#2C5A69;
+    --light-blue:#91BCC3;
+}
+html{
+    background-color: var(--blue);
+    font-family: 'Shantell Sans', cursive;
+    height: 100%;
+}
+header > nav{
+    position: fixed;
+    width: 99vw;
+    border-bottom: 10px solid var(--light-blue);
+}
+a{
+    text-decoration:none;
+}
+
+main{
+    text-align: center;
+    justify-content: center;
+}
+
+/*Меню*/
+.checkbox{display: none}
+.menu{
+    display: flex;
+    align-items: center;
+    position: absolute;
+    z-index: 1;
+    float: left;
+    background-color: var(--orange);
+    height: 100px;
+    width: 100px;
+    float: left;
+    border-radius: 10px;
+}
+
+.menu > span,
+.menu > span::before,
+.menu > span::after {
+    display: block;
+    position: absolute;
+    left: 15%;
+    width: 70%;
+    height: 10px;
+    background-color: var(--light-orange);
+}
+.menu > span::before {
+    content: '';
+    top: -20px;
+    left: 0;
+    width: 100%;
+}
+.menu > span::after {
+    content: '';
+    top: 20px;
+    width: 100%;
+    left:0;
+}
+
+.menu__box {
+    background-color: var(--orange);
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content:flex-start;
+    align-items: center;
+    position: fixed;
+    visibility: hidden;
+    top:0;
+    right: 0;
+    width: 20%;
+    height: 100%;
+    margin-top: 12vh;
+    padding-top: 1vh;
+    list-style: none;
+    text-align: center;
+    border-right: 10px solid var(--light-blue); 
+    border-top:  10px solid var(--light-blue); 
+    border-top-right-radius: 20px;
+    
+    z-index: 2;
+}
+.menu__box > div {
+    display: block;
+    padding: 12px 24px;
+    font-size: 40px;
+    font-weight: 600;
+    text-decoration: none;
+}
+.menu__box > div > a {
+    color: var(--light-orange);
+    text-decoration: none;
+}
+.menu__box>div:hover {
+    background-color: var(--blue);
+}
+#menu__toggle:checked ~ .menu > span {
+    transform: rotate(45deg);
+}
+#menu__toggle:checked ~ .menu > span::before {
+    top: 0;
+    transform: rotate(0);
+}
+#menu__toggle:checked ~ .menu > span::after {
+    top: 0;
+    transform: rotate(90deg);
+}
+#menu__toggle:checked ~ .menu__box{
+    visibility: visible;
+}
+/*Меню конец*/
+
+/*Логотип*/
+.logo{
+    background-color: var(--orange);
+    height: 100px;
+    width: 300px;
+    float: left;
+    border-radius: 50px;
+    margin-left: 250px;
+}
+.logo-text{
+    color: var(--light-orange);
+    text-align: center;
+    margin: 20px auto;
+    font-size: 40px;
+}
+
+/*Логотип конец*/
+
+/*Вход*/
+.login{
+    border: 5px solid var(--light-orange); 
+    position: absolute;
+    width: 280px;
+    height: 80px;
+    margin: 5px 5px;
+    border-radius: 50px;
+}
+.login-container{
+    background-color:var(--orange);
+    margin: auto;
+    text-align: center;
+    float: right;
+    width: 300px;
+    height: 100px;
+    border-radius: 10px;
+}
+.login-text{
+    color: var(--light-orange);
+    font-size: 40px;
+    margin-top: 10px;
+}
+/*Вход конец*/
